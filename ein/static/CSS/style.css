@@ -1,0 +1,50 @@
+
+
+@font-face {
+  font-family: futura;
+  src: url(sansation_light.woff);
+} 
+
+
+.navbar-default {
+    background-color: #ffffff; /* Set the navbar's background color */
+    padding: 10px;
+    border-radius: 0; /* Remove rounded edges */
+    font-family: futura; /* Example: Change to desired font */
+  }
+  
+  
+  .banner {
+    background-color:  #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(218, 218, 218, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    background-color: #0091b6;
+  }
+  
+  .btn-custom {
+    background-color: #ff0000;
+    color: #ffffff;
+    transition: background-color 0.3s; /* Add a transition effect */
+    border: none;
+  }
+  
+  .btn-custom:focus,
+  .btn-custom:hover {
+      background-color: #ffffff;
+      color: #ff0000;
+      box-shadow: 0 0 10px #ffffff; /* Add a white box shadow to create the glow effect */
+      border: none;
+      
+  }
+  .btn-custom:active {
+      background-color: #ffffff;
+      color: #1030a4;
+      box-shadow: 0 0 10px #ffffff; /* Add a white box shadow to create the glow effect */
+      border: none;
+  }
+
+  

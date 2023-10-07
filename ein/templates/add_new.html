@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if message %} 
+  {{ message }}
+{% endif %}
+
+<h1 style="color: rgb(131, 131, 131);">Add new plant</h1>
+
+<form style="color: rgb(131, 131, 131);" action="{% url 'add_new_plant' %}" method="post">
+  {% csrf_token %} 
+    <label for="fname">Name of plant:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="name_plant" name="name_plant"><br>
+    <label for="lname">Description:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="Description" name="Description" ><br><br>
+    <label for="email">Price:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="Price" name="Price" ><br><br>
+    <label for="password">Image:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="Image" name="Image" ><br><br>
+    <label for="confirm">Region:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="Region" name="Region" ><br><br>
+    <input style="color: rgb(131, 131, 131);"type="submit" value="Save">
+  </form> 
+
+  <style>
+
+@font-face {
+  font-family: futura;
+  src: url(sansation_light.woff);
+} 
+
+body {
+    /*background-color: #f4ffd9;*/
+    background-image: url("https://i.pinimg.com/originals/00/52/b4/0052b4958ed0e12c10ec05c0a65b59b5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: futura;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-family: futura;
+}
+  
+    </style>
+
+{% endblock %}

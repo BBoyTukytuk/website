@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body>
+
+{% if message %} 
+  {{ message }}
+{% endif %}
+
+<h1 style="color: rgb(131, 131, 131);">Log into account</h1>
+<p style="color: rgb(131, 131, 131);">If there is a problem please click the EIN logo</p>
+
+<form action="{% url 'login_view' %}" method="post">
+  {% csrf_token %} 
+    <label style="color: rgb(131, 131, 131)" for="email">email:</label><br>
+    <input type="email" id="email" name="email" ><br><br>
+    <label style="color:  rgb(131, 131, 131)" for="password">password:</label><br>
+    <input type="password" id="password" name="password" ><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+
+  <style>
+
+@font-face {
+  font-family: futura;
+  src: url(sansation_light.woff);
+} 
+
+body {
+    /*background-color: #f4ffd9;*/
+    background-image: url("https://i.pinimg.com/originals/00/52/b4/0052b4958ed0e12c10ec05c0a65b59b5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: futura;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-family: futura;
+}
+  </style>
+
+{% endblock %}
+
+  

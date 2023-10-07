@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div class="plant-container">
+
+<h1>Error</h1>
+
+</div>
+
+<style>
+
+@font-face {
+  font-family: futura;
+  src: url(sansation_light.woff);
+} 
+
+body {
+    /*background-color: #f4ffd9;*/
+    background-image: url("https://www.hdwallpapers.in/download/cloud_sky_white_background_hd_white_background-1920x1080.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: futura;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-family: futura;
+}
+
+.plant-container {
+    display: flex;
+    gap: 0;
+    overflow: hidden; /* To prevent overflowing images */
+}
+
+.plant-card {
+    flex: 0 0 calc(33.33% - 1px); /* Adjusted width calculation */
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.info-card {
+    margin: 2;
+}
+
+.plant-card img {
+    width: 100%;
+    height: auto;
+}
+</style>
+
+{% endblock %}

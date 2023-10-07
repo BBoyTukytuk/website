@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if message %} 
+  {{ message }}
+{% endif %}
+
+<h1 style="color: rgb(131, 131, 131);">Create An Account</h1>
+
+<form style="color: rgb(131, 131, 131);" action="{% url 'register' %}" method="post">
+  {% csrf_token %} 
+    <label for="fname">First Name:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="text" id="lname" name="lname" ><br><br>
+    <label for="email">Email:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="email" id="email" name="email" ><br><br>
+    <label for="password">Password:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="password" id="password" name="password" ><br><br>
+    <label for="confirm">Confirm:</label><br>
+    <input style="color: rgb(131, 131, 131);" type="password" id="confirm" name="confirm" ><br><br>
+    <input style="color: rgb(131, 131, 131);"type="submit" value="Submit">
+  </form> 
+
+  <style>
+
+@font-face {
+  font-family: futura;
+  src: url(sansation_light.woff);
+} 
+
+body {
+    /*background-color: #f4ffd9;*/
+    background-image: url("https://i.pinimg.com/originals/00/52/b4/0052b4958ed0e12c10ec05c0a65b59b5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: futura;
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    font-family: futura;
+}
+  
+    </style>
+
+{% endblock %}
